@@ -1,7 +1,0 @@
-corpus/
-output_phase2/
-output_phase1/
-
-*.py~
-*.sh~
-*.pyc
