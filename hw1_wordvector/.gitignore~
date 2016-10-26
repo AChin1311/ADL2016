@@ -1,0 +1,7 @@
+corpus/
+output/
+best_result/
+tmp/
+*.py~
+model*
+vocab.txt
