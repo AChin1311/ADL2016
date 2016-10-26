@@ -1,6 +1,0 @@
-corpus/
-output/
-best_result/
-*.py~
-model*
-vocab.txt
