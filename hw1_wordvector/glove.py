@@ -37,7 +37,7 @@ corpus = []
 corpus.append(data)
 model.fit_to_corpus(corpus)
 print("=======start training========")
-model.train(num_epochs=40)
+model.train(num_epochs=10)
 print("=======finish training========")
 words = model.words
 print(words)

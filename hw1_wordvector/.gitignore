@@ -1,7 +1,10 @@
 corpus/
-output/
-best_result/
+output_phase2/
+output_phase1/
+
 tmp/
+tmp2/
+
 *.py~
-model*
-vocab.txt
+*.sh~
+*.pyc
