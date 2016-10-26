@@ -13,7 +13,7 @@ def main(_):
       model.train()  # Process one epoch
 
     emb = session.run(model._w_in)  
-    with open("tmp/word2vec", "w") as f:
+    with open("tmp/word2vec", "w+") as f:
       for i in range(len(model._id2word)):
         s = model._id2word[i] + " " + " ".join("{:f}".format(x) for x in emb[i]) + "\n"
         f.write(s)
