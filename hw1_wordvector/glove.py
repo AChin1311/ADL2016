@@ -24,7 +24,7 @@ def read_data(filename):
     data = tf.compat.as_str(f.read(f.namelist()[0])).split()
     return data
 
-filename = maybe_download('text8.zip', 31344016)
+filename = maybe_download('corpus/text8.zip', 31344016)
 data = read_data(filename)
 
 gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.2)
