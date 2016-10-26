@@ -41,7 +41,7 @@ model.train(num_epochs=40)
 print("=======finish training========")
 words = model.words
 print(words)
-with open("output_glove", "w") as f:
+with open("tmp/glove", "w") as f:
   for w in words:
     s = w + " " + ' '.join([str(x) for x in model.embedding_for(w)]) + "\n"
     print(s)

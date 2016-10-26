@@ -13,12 +13,12 @@ def main(_):
       model.train()  # Process one epoch
 
     emb = session.run(model._w_in)  
-    with open("output_skipgram", "w") as f:
+    with open("tmp/word2vec", "w") as f:
       for i in range(len(model._id2word)):
         s = model._id2word[i] + " " + " ".join("{:f}".format(x) for x in emb[i]) + "\n"
         f.write(s)
 
 if __name__ == "__main__":
-  gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
+  gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.2)
   sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
   tf.app.run()
