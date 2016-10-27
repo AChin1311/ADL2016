@@ -16,7 +16,7 @@ def main(_):
 
     emb = session.run(model._w_in)  
     print("write file")
-    with open("tmp/ptt", "w") as f:
+    with open("tmp/ptt", "w+") as f:
       for i in range(len(model._id2word)):
         s = model._id2word[i] + " " + " ".join("{:f}".format(x) for x in emb[i]) + "\n"
         f.write(s)

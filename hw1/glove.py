@@ -31,19 +31,19 @@ gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.2)
 sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 
 print("========init GloveModel========")
-model = glove.GloVeModel(embedding_size=128, context_size=10, learning_rate=0.1)
+model = glove.GloVeModel(embedding_size=100, context_size=10, learning_rate=0.1)
 print("=======fit to corpus========")
 corpus = []
 corpus.append(data)
 model.fit_to_corpus(corpus)
 print("=======start training========")
-model.train(num_epochs=10)
+model.train(num_epochs=50)
 print("=======finish training========")
 words = model.words
-print(words)
-with open("tmp/glove", "w") as f:
+print("=======write file========")
+with open("tmp/glove", "w+") as f:
   for w in words:
     s = w + " " + ' '.join([str(x) for x in model.embedding_for(w)]) + "\n"
-    print(s)
+    #print(s)
     f.write(s)
-
+print("========finish========")
