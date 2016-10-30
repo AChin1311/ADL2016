@@ -1,7 +1,4 @@
 corpus/
-output_phase2/
-output_phase1/
-
 tmp/
 
 *.py~
