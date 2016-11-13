@@ -80,7 +80,7 @@ with graph.as_default():
         for x_test_batch in batches:
             batch_predictions = sess.run(predictions, {input_x: x_test_batch, dropout_keep_prob: 1.0})
             all_predictions = np.concatenate([all_predictions, batch_predictions])
-
+'''
 # Print accuracy if y_test is defined
 if y_test is not None:
     correct_predictions = float(sum(all_predictions == y_test))
@@ -93,6 +93,6 @@ out_path = os.path.join(FLAGS.checkpoint_dir, "..", "prediction.csv")
 #print("Saving evaluation to {0}".format(out_path))
 with open(out_path, 'w') as f:
     csv.writer(f).writerows(predictions_human_readable)
-
+'''
 for i in range(1000):
     print(int(all_predictions[i]))
