@@ -1,6 +1,1 @@
-model_checkpoint_path: "/nfs/home/b821213/achin/ADL2016/hw2/bonus2/runs/checkpoints/model-14200"
-all_model_checkpoint_paths: "/nfs/home/b821213/achin/ADL2016/hw2/bonus2/runs/checkpoints/model-13800"
-all_model_checkpoint_paths: "/nfs/home/b821213/achin/ADL2016/hw2/bonus2/runs/checkpoints/model-13900"
-all_model_checkpoint_paths: "/nfs/home/b821213/achin/ADL2016/hw2/bonus2/runs/checkpoints/model-14000"
-all_model_checkpoint_paths: "/nfs/home/b821213/achin/ADL2016/hw2/bonus2/runs/checkpoints/model-14100"
-all_model_checkpoint_paths: "/nfs/home/b821213/achin/ADL2016/hw2/bonus2/runs/checkpoints/model-14200"
+model_checkpoint_path: "./model-14200"
