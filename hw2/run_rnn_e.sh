@@ -1,12 +1,10 @@
 #!/bin/bash
 
-#bash run_rnn_e.sh input_file tree_file output_file
+# please download the model at https://drive.google.com/file/d/0B6z4WeJetpHgeTBaTGF1cmkzaDg/view?usp=sharing
+# unzip the file and name the folder "weights"
+# put "weights" folder in the same directory with rvnn.py and preprocess.py
 
-# get model
-#mkdir weights
-#wget "http://www.csie.ntu.edu.tw/~b02902034/model.zip"
-#unzip model.zip
-#mv rnn_embed=300_l2=0.020000_lr=0.001000.weights.temp weights/
+mkdir trees
 
 # preprocess testing data
 python3 preprocess.py $2

@@ -1,4 +1,4 @@
-../hw1/*
+weights/
 *.py~
 *.sh~
 *.pyc
