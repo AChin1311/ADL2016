@@ -1,0 +1,1 @@
+name pricerange area address phone kidsallowed near goodformeal type food count price postcode
