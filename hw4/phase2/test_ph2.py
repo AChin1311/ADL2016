@@ -61,8 +61,8 @@ tf.app.flags.DEFINE_integer("size", 300, "Size of each model layer.")
 tf.app.flags.DEFINE_integer("num_layers", 2, "Number of layers in the model.")
 tf.app.flags.DEFINE_integer("en_vocab_size", 200000, "English vocabulary size.")
 tf.app.flags.DEFINE_integer("fr_vocab_size", 200000, "French vocabulary size.")
-tf.app.flags.DEFINE_string("data_dir", "./data", "Data directory")
-tf.app.flags.DEFINE_string("train_dir", "./tmp", "Training directory.")
+tf.app.flags.DEFINE_string("data_dir", "./phase2/data", "Data directory")
+tf.app.flags.DEFINE_string("train_dir", "./phase2/tmp", "Training directory.")
 tf.app.flags.DEFINE_integer("max_train_data_size", 0,
                             "Limit on the size of training data (0: no limit).")
 tf.app.flags.DEFINE_integer("steps_per_checkpoint", 200,
@@ -238,7 +238,7 @@ def decode():
     # Decode from standard input.
     #sys.stdout.write("> ")
     #sys.stdout.flush()
-    with open("mytest.en", "r") as f:
+    with open("./phase2/mytest.en", "r") as f:
       data = f.readlines()
     #sentence = sys.stdin.readline()
     #while sentence:
@@ -261,7 +261,7 @@ def decode():
         if data_utils.EOS_ID in outputs:
           outputs = outputs[:outputs.index(data_utils.EOS_ID)]
         # Print out French sentence corresponding to outputs.
-        #print(" ".join([tf.compat.as_str(rev_fr_vocab[output]) for output in outputs]))
+        print(" ".join([tf.compat.as_str(rev_fr_vocab[output]) for output in outputs]))
         f.write(" ".join([tf.compat.as_str(rev_fr_vocab[output]) for output in
                           outputs])+"\n")
         #print("> ", end="")

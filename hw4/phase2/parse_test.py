@@ -38,12 +38,12 @@ with open(sys.argv[1], "r") as data_file:
     #print(func, para, value, line[2])
 
 para_lst = []
-with open("para_lst.txt", "r") as f:
+with open("phase2/para_lst.txt", "r") as f:
   data = f.readlines()
   para_lst = data[0].split()
 print(para_lst)
 
-with open("mytest.en", "w+") as fen:
+with open("phase2/mytest.en", "w+") as fen:
     for i in range(len(parsed_func)):
       out = parsed_func[i] + " "
       for p in para_lst:
