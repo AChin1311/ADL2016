@@ -1,6 +1,6 @@
 import numpy as np
 import scipy.ndimage as ndimage
-import blosc
+#import blosc
 import png
 
 class State:
